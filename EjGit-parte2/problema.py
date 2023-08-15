@@ -26,7 +26,7 @@ def menu():
 6. Mostrar división
 7. Salir
            """)
-    opcio=int(input("Elija una opción: "))
+    opcion=int(input("Elija una opción: "))
     while (opcion > 7 or opcion == 0):
         print("Opcion INCORRECTA")
         opcion=int(input("Elija una opción: "))
@@ -42,7 +42,7 @@ def suma(valor1, valor2):
     return(rtdo)
 
 def resta(valor1, valor2):
-    rtdo = valor1 -+ valor2
+    rtdo = valor1 - valor2
     return(rtdo)
 
 def multiplicacion(valor1, valor2):
@@ -50,14 +50,14 @@ def multiplicacion(valor1, valor2):
     return(rtdo)
 
 def division(valor1, valor2):
-    rtdo = valor1 // valor2
+    rtdo = valor1 / valor2
     return(rtdo)
 
 "EJERCICIO"
 num1=-1
 num2=-1
 opc = menu()
-while (opc != 5):
+while (opc != 7):
     if opc == 1:
         num1 = ingresar_valor()
     if opc == 2:
@@ -66,16 +66,16 @@ while (opc != 5):
         if num1 == -1 or num2 == -1:
             print("\nERROR\n")
             break
-        elif opc == 4: 
+        elif opc == 3: 
             resultado = suma(num1, num2)
             print(f"\nEl resultado de la suma es: {resultado}")
-        elif opc == 5:
+        elif opc == 4:
             resultado = resta(num1, num2)
             print(f"\nEl resultado de la resta es: {resultado}")
-        elif opc == 6:
+        elif opc == 5:
             resultado = multiplicacion(num1, num2)
             print(f"\nEl resultado de la multiplicación es: {resultado}")
-        elif opc == 7:
+        elif opc == 6:
             resultado = division(num1, num2)
             print(f"\nEl resultado de la división es de: {resultado}")
     opc = menu()
